@@ -13,7 +13,7 @@ try {
   $stmt = $pdo->query("SELECT COUNT(*) AS total FROM mensajes");
   $row = $stmt->fetch();
   echo "<h1>Apache + PHP + MySQL en Docker</h1>";
-  echo "<p>Conexión exitosa. Mensajes en la base: <strong>{$row['total']}</strong></p>";
+  echo "<p>Conexión OK. Mensajes en la base: <strong>{$row['total']}</strong></p>";
 } catch (Throwable $e) {
   http_response_code(500);
   echo "<h1>Error conectando a MySQL</h1>";
